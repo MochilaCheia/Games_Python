@@ -3,95 +3,31 @@ from time import sleep
 
 def sorteador_desenhos():
 
-    possiveis_desenhos = ['A rolling pin', 'A hammock', 'An anchor', 'A skunk', 'A desk chair',
-                          'Van Gogh’s ear', 'A sandwich', 'A string quartet', 'An ottoman',
-                          'A bottle opener', 'A fire escape', 'Luminescent plankton', 'A cabin',
-                          'Mushrooms', 'Shrubbery', 'Bob Marley', 'A full house', 'Bubbles'
-                          'Fangs', 'A pickle', 'An ironing board', 'A dolphin', 'A paper clip',
-                          'A trumpet', 'A burrito', 'Tube socks', 'A crayon', 'A robot',
-'A roller coaster',
-'A mosquito',
-'Fruit cocktail',
-'A peg leg',
-'A spigot',
-'A balloon',
-'Head in the clouds',
-'The Milky Way',
-'A knot',
-'An old key',
-'A submarine',
-'A tulip',
-'A gold medal',
-'Synchronized swimmers',
-'Pom-poms',
-'A juice box',
-'A jar full of pennies',
-'A bag of hammers',
-'Jelly beans',
-'A sundial',
-'A crystal ball',
-'A synthesizer',
-'A paper airplane',
-'A water tower',
-'A surfboard',
-'New Jersey',
-'Fiji',
-'A layer cake',
-'A panda',
-'A mime',
-'Charlie Chaplin',
-'A penguin',
-'A seagull',
-'David Bowie',
-'A sensitive cowboy',
-'A leopard',
-'An anatomy chart',
-'A tree limb',
-'A ship in a bottle',
-'A mouth',
-'Brass knuckles',
-'An ear of corn',
-'Costume jewelry',
-'A mirage',
-'Smoke',
-'Mold',
-'A rainbow',
-'A dollar bill',
-'A bone',
-'A glass of milk',
-'A teapot',
-'Weeds',
-'Dance steps',
-'A turkey leg',
-'A pencil',
-'A picket fence',
-'A Tiffany lamp',
-'The Empire State Building',
-'A stalagmite',
-'A stalactite',
-'A kiss',
-'A ladybug',
-'A helmet',
-'A paw print',
-'A Martian',
-'A T-shirt',
-'A cinder block',
-'Swim fins',
-'A ripe banana',
-'A barbell',
-'A tennis racket',
-'Japan',
-'A spiral staircase',
-'A ponytail',
-'A campfire',
-'A squirrel',
-'A thumb',
-'A book',
-'Girlish laughter',
-'Tangled ribbons',
-'Noodles',
-'Best friends',
-'Worst enemies',
+    possiveis_desenhos = ['1- A rolling pin', '2- A hammock', '3- An anchor', '4- A skunk', '5- A desk chair',
+                          '6- Van Gogh’s ear', '7- A sandwich', '8- A string quartet', '9- An ottoman',
+                          '10- A bottle opener', '11- A fire escape', '12- Luminescent plankton', '13- A cabin',
+                          '14- Mushrooms', '15- Shrubbery', '16- Bob Marley', '17- A full house', '18- Bubbles'
+                          '19- Fangs', '20- A pickle', '21- An ironing board', '22- A dolphin', '23- A paper clip',
+                          '24- A trumpet', '25- A burrito', '26- Tube socks', '27- A crayon', '28- A robot',
+                          '29- A roller coaster', '30- A mosquito', '31- Fruit cocktail', '32- A peg leg',
+                          '33- A spigot', '34- A balloon', '35- Head in the clouds', '36- The Milky Way',
+                          '37- A knot', '38- An old key', '39- A submarine', '40- A tulip', '41- A gold medal',
+                          '42- Synchronized swimmers', '43- Pom-poms', '44- A juice box', '45- A jar full of pennies',
+                          '46- A bag of hammers', '47- Jelly beans', '48- A sundial', '49- A crystal ball',
+                          '50- A synthesizer', 'A paper airplane', 'A water tower', 'A surfboard',
+                          'New Jersey', 'Fiji', 'A layer cake', 'A panda', 'A mime',
+                          'Charlie Chaplin', 'A penguin', 'A seagull', 'David Bowie',
+                          'A sensitive cowboy', 'A leopard', 'An anatomy chart', 'A tree limb',
+                          'A ship in a bottle', 'A mouth', 'Brass knuckles', 'An ear of corn',
+                          'Costume jewelry', 'A mirage', 'Smoke', 'Mold', 'A rainbow', 'A dollar bill',
+                          'A bone', 'A glass of milk', 'A teapot', 'Weeds', 'Dance steps', 'A turkey leg',
+                          'A pencil', 'A picket fence', 'A Tiffany lamp', 'The Empire State Building',
+                          'A stalagmite', 'A stalactite', 'A kiss', 'A ladybug', 'A helmet', 'A paw print',
+                          'A Martian', 'A T-shirt', 'A cinder block', 'Swim fins', 'A ripe banana',
+                          'A barbell', 'A tennis racket', 'Japan', 'A spiral staircase',
+                          'A ponytail', 'A campfire', 'A squirrel', 'A thumb', 'A book',
+                          'Girlish laughter', 'Tangled ribbons', 'Noodles', 'Best friends',
+                          'Worst enemies',
 'A lock',
 'An accordion',
 'A log',
@@ -574,16 +510,23 @@ def sorteador_desenhos():
 'An ink pot',
 'A sippy cup',
 'Maple syrup',
-                          'A video game', 'Tectonic plates', 'A beach'
+                          'A video game', 'Tectonic plates', 'A beach',
                           'A wedding dress', 'A spelunker', 'A calculator', 'A baby monster', 'A transportation system',
-                          'A swamp', 'An invitation', 'An oven', 'A train', 'The Bermuda Triangle', 'A heart', 'A movie star'
+                          'A swamp', 'An invitation', 'An oven', 'A train', 'The Bermuda Triangle', 'A heart', 'A movie star',
                           'A spiderweb', 'An igloo', 'Presidential pets', 'Paisley', 'A grandma', 'Lightning',
                           'Wind', 'Run-D.M.C.', 'A tuxedo', 'A mayonnaise jar', 'A lemon meringue pie',
                           'A sea urchin', 'A canyon', 'A cave', 'A concert', 'A viper', 'A phonograph', 'A bow', 'A convertible',
                           'Ski slopes', 'A mummy', 'Broken glass', 'A bed', 'A bar of music', 'Polka dots', 'Woodgrain',
                           'Plaid', 'Zigzag', 'A tacky rug', 'A plastic bag', 'A muffin tin', 'A sweater', 'A tuba', 'Yourself']
 
-    sorteio = input('Quer sortear seu desenho?\n')
+    print('Olá, eu sou sou Sorte! seu sorteador de desenhos!\n~Seja bem vindo!~')
+    sleep(1)
+    print('>> Para utilizar o sistema, basta responder a pergunta do jeito que preferir'
+          ' e para encerrar basta responder não a pergunta.<<')
+    sleep(1)
+    print('Um arquivo de texto será criado para anotar quais desenhos você sortear, assim você desenhará o mesmo por engano.\n')
+
+    sorteio = input('Deseja sortear seu desenho?\n')
 
     while sorteio != 'não':
         numeros_sortidos = random.choice(possiveis_desenhos)
@@ -597,4 +540,7 @@ def sorteador_desenhos():
         sorteio = input('Deseja continuar sorteando?\n')
 
 if __name__=='__main__':
-    print(sorteador())
+    print(sorteador_desenhos())
+
+ # No arquivo de texto que for gerado pra adicionar os desenhos sorteados,
+ # faça uma operação que conte os desenhos no arquivo de texto e subtraia menos 642.
