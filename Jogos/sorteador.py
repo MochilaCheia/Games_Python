@@ -1,6 +1,7 @@
 import random
+from time import sleep
 
-def sorteador():
+def sorteador_desenhos():
 
     possiveis_desenhos = ['A rolling pin', 'A hammock', 'An anchor', 'A skunk', 'A desk chair',
                           'Van Gogh’s ear', 'A sandwich', 'A string quartet', 'An ottoman',
@@ -299,266 +300,266 @@ def sorteador():
 'A power tool',
 'A butterfly',
 'Toast',
-A computer
-An eye patch
-A crab apple
-A golf ball
-Cutlery
-A Q-tip
-Chocolate truffles
-An office park
-A sock monkey
-A clock tower
-A snorkel
-A scorpion
-A sardine tin
-A secret door
-A compound fracture
-A bookstore
-Dumplings
-A prom dress
-A bowl of pudding
-A director’s chair
-A beetle
-A water jug
-Your least favorite food
-A turntable
-A wheel of fortune
-A fainting goat
-A dumpster
-A parasite
-Lipstick
-An oasis
-A frying pan
-Potato salad
-Buttons
-A lumberjack
-An artichoke
-A flower
-A teacup
-A map
-A moose
-A palm tree
-A bear family
-The Black forest
-The periodic table
-A keyboard
-An anteater
-A comet
-A globe
-Noah’s ark
-Popcorn
-Mac and cheese
-The moon
-An apron
-An antelope
-Petroleum jelly
-An uneventful street
-Bricks
-A wormhole
-A black hole
-Perfume
-A giraffe
-A chainsaw
-Cotton candy
-A sidewalk
-A sailboat
-A fjord
-A brain
-Saturn
-A ticket
-A barrel of monkeys
-A real estate agent
-Tears
-First love
-Middle school
-A lock
-A tongue
-Puget Sound
-Peanut butter
-A cranky old man
-Roller skates
-A pillow
-A gnome
-A bully
-A puppet
-An opera singer
-Alphabet soup
-A lollipop
-Contrails
-A hanger
-A motel
-A string of DNA
-A squid
-A stick of gum
-A ballpoint pen
-A cornucopia
-A gravestone
-Teeth
-Icicles
-A snout
-A cabbage patch
-An inner tube
-An elephant
-An Egyptian pyramid
-A narwhal
-A swimming pool
-Fresh air
-An iceberg
-A cello
-A stoplight
-Mistakes
-A dream
-A nightmare
-A fire truck
-A tea bag
-Tiny ballerinas
-An electrical outlet
-A game-show host
-A technological diagram
-Footprints
-A stain
-Unmentionables
-A porcupine
-Alfred Hitchcock
-Bugs
-A thumbtack
-A cupcake
-A steak
-A pirate flag
-A bowling pin
-A loading crane
-A reflection
-A jungle
-A tube of toothpaste
-A turnip
-A trailer
-An orb
-A long-playing record
-A centaur
-Mount Rushmore
-A labyrinth
-Your pinky finger
-A wooly mammoth
-A boss
-An ashtray
-A walnut
-A burlap sack
-Mismatched earrings
-Freckles
-A swimsuit
-A chessboard
-A tetherball
-Root beer
-Dimples
-A poodle
-A box car
-Donuts
-A church
-An architect
-Nails
-A cowbell
-A bus stop
-Leisure Wear
-A huge gold frame
-A whisper
-A scream
-A jellyfish
-A skeleton
-A toaster
-A hummingbird
-A condiment
-A safety pin
-A garden
-Lucky charms
-A partner in crime
-The man in the moon
-Platform shoes
-A quilt
-A doily
-Vitamins
-A belt buckle
-A container ship
-A scoundrel
-Crutches
-A dandy
-A waterfall
-A circus
-A troll
-A deserted island
-An owl
-A beaker
-A jumper
-A pearl
-A broken toy
-A seashell
-A feathered hat
-An amoeba
-Tie-Dye
-A bobsledder
-A houseboat
-A gourd
-A saint
-A playsuit
-An orphan
-A bow and arrow
-A pinecone
-Curtains
-A chorus line
-A wallet
-A messenger bag
-Shrimp cocktail
-An eggbeater
-A sheep
-A blackberry bush
-Spats
-Dignity
-A carrot top
-A freezer
-A Scottie dog
-A pineapple upside-down cake
-A telescope
-A mystery box
-A bird in the hand
-A horse and carriage
-Skee ball
-A razor blade
-A goldfish
-A recycling bin
-A palm reading
-A road
-Windows
-An egg
-A birdhouse
-A sweatband
-A strawberry
-Sushi
-A hippo
-A prism
-A sense of humor
-Pie a la mode
-A dragonfly
-A tractor
-A propaganda poster
-Behind the scenes
-2 x 4s
-A lava lamp
-A harmonica
-A ruler
-Virginia Woolf
-A windmill
-Plateaus
-A crash-test dummy
-A starfish
-Rain boots
-A shoulder shrug
-A pomegranate
-A certificate
-A Beatles song
-A hobo
-A portal
-A wheelbarrow
-A three-toed sloth
+'A computer',
+'An eye patch',
+'A crab apple',
+'A golf ball',
+'Cutlery',
+'A Q-tip',
+'Chocolate truffles',
+'An office park',
+'A sock monkey',
+'A clock tower',
+'A snorkel',
+'A scorpion',
+'A sardine tin',
+'A secret door',
+'A compound fracture',
+'A bookstore',
+'Dumplings',
+'A prom dress',
+'A bowl of pudding',
+'A director’s chair',
+'A beetle',
+'A water jug',
+'Your least favorite food',
+'A turntable',
+'A wheel of fortune',
+'A fainting goat',
+'A dumpster',
+'A parasite',
+'Lipstick',
+'An oasis',
+'A frying pan',
+'Potato salad',
+'Buttons',
+'A lumberjack',
+'An artichoke',
+'A flower',
+'A teacup',
+'A map',
+'A moose',
+'A palm tree',
+'A bear family',
+'The Black forest',
+'The periodic table',
+'A keyboard',
+'An anteater',
+'A comet',
+'A globe',
+'Noah’s ark',
+'Popcorn',
+'Mac and cheese',
+'The moon',
+'An apron',
+'An antelope',
+'Petroleum jelly',
+'An uneventful street',
+'Bricks',
+'A wormhole',
+'A black hole',
+'Perfume',
+'A giraffe',
+'A chainsaw',
+'Cotton candy',
+'A sidewalk',
+'A sailboat',
+'A fjord',
+'A brain',
+'Saturn',
+'A ticket',
+'A barrel of monkeys',
+'A real estate agent',
+'Tears',
+'First love',
+'Middle school',
+'A lock',
+'A tongue',
+'Puget Sound',
+'Peanut butter',
+'A cranky old man',
+'Roller skates',
+'A pillow',
+'A gnome',
+'A bully',
+'A puppet',
+'An opera singer',
+'Alphabet soup',
+'A lollipop',
+'Contrails',
+'A hanger',
+'A motel',
+'A string of DNA',
+'A squid',
+'A stick of gum',
+'A ballpoint pen',
+'A cornucopia',
+'A gravestone',
+'Teeth',
+'Icicles',
+'A snout',
+'A cabbage patch',
+'An inner tube',
+'An elephant',
+'An Egyptian pyramid',
+'A narwhal',
+'A swimming pool',
+'Fresh air',
+'An iceberg',
+'A cello',
+'A stoplight',
+'Mistakes',
+'A dream',
+'A nightmare',
+'A fire truck',
+'A tea bag',
+'Tiny ballerinas',
+'An electrical outlet',
+'A game-show host',
+'A technological diagram',
+'Footprints',
+'A stain',
+'Unmentionables',
+'A porcupine',
+'Alfred Hitchcock',
+'Bugs',
+'A thumbtack',
+'A cupcake',
+'A steak',
+'A pirate flag',
+'A bowling pin',
+'A loading crane',
+'A reflection',
+'A jungle',
+'A tube of toothpaste',
+'A turnip',
+'A trailer',
+'An orb',
+'A long-playing record',
+'A centaur',
+'Mount Rushmore',
+'A labyrinth',
+'Your pinky finger',
+'A wooly mammoth',
+'A boss',
+'An ashtray',
+'A walnut',
+'A burlap sack',
+'Mismatched earrings',
+'Freckles',
+'A swimsuit',
+'A chessboard',
+'A tetherball',
+'Root beer',
+'Dimples',
+'A poodle',
+'A box car',
+'Donuts',
+'A church',
+'An architect',
+'Nails',
+'A cowbell',
+'A bus stop',
+'Leisure Wear',
+'A huge gold frame',
+'A whisper',
+'A scream',
+'A jellyfish',
+'A skeleton',
+'A toaster',
+'A hummingbird',
+'A condiment',
+'A safety pin',
+'A garden',
+'Lucky charms',
+'A partner in crime',
+'The man in the moon',
+'Platform shoes',
+'A quilt',
+'A doily',
+'Vitamins',
+'A belt buckle',
+'A container ship',
+'A scoundrel',
+'Crutches',
+'A dandy',
+'A waterfall',
+'A circus',
+'A troll',
+'A deserted island',
+'An owl',
+'A beaker',
+'A jumper',
+'A pearl',
+'A broken toy',
+'A seashell',
+'A feathered hat',
+'An amoeba',
+'Tie-Dye',
+'A bobsledder',
+'A houseboat',
+'A gourd',
+'A saint',
+'A playsuit',
+'An orphan',
+'A bow and arrow',
+'A pinecone',
+'Curtains',
+'A chorus line',
+'A wallet',
+'A messenger bag',
+'Shrimp cocktail',
+'An eggbeater',
+'A sheep',
+'A blackberry bush',
+'Spats',
+'Dignity',
+'A carrot top',
+'A freezer',
+'A Scottie dog',
+'A pineapple upside-down cake',
+'A telescope',
+'A mystery box',
+'A bird in the hand',
+'A horse and carriage',
+'Skee ball',
+'A razor blade',
+'A goldfish',
+'A recycling bin',
+'A palm reading',
+'A road',
+'Windows',
+'An egg',
+'A birdhouse',
+'A sweatband',
+'A strawberry',
+'Sushi',
+'A hippo',
+'A prism',
+'A sense of humor',
+'Pie a la mode',
+'A dragonfly',
+'A tractor',
+'A propaganda poster',
+'Behind the scenes',
+'2 x 4s',
+'A lava lamp',
+'A harmonica',
+'A ruler',
+'Virginia Woolf',
+'A windmill',
+'Plateaus',
+'A crash-test dummy',
+'A starfish',
+'Rain boots',
+'A shoulder shrug',
+'A pomegranate',
+'A certificate',
+'A Beatles song',
+'A hobo',
+'A portal',
+'A wheelbarrow',
+'A three-toed sloth',
 'A box of fried chicken',
 'Wise babies',
 'The Abominable Snow Man',
@@ -582,17 +583,18 @@ A three-toed sloth
                           'Ski slopes', 'A mummy', 'Broken glass', 'A bed', 'A bar of music', 'Polka dots', 'Woodgrain',
                           'Plaid', 'Zigzag', 'A tacky rug', 'A plastic bag', 'A muffin tin', 'A sweater', 'A tuba', 'Yourself']
 
-    sorteio = input('Quer sortear seu desenho?')
+    sorteio = input('Quer sortear seu desenho?\n')
 
     while sorteio != 'não':
         numeros_sortidos = random.choice(possiveis_desenhos)
-        print(numeros_sortidos)
+        numero_itens = len(possiveis_desenhos)
+        sleep(1)
+        print(f'Você sorteou: {numeros_sortidos}. Divirta-se desenhando!\n')
+        sleep(1)
+        print(f'E o número de opções restantes é: {numero_itens}\n')
         possiveis_desenhos.remove(numeros_sortidos)
-        sorteio = input('Deseja continuar sorteando?')
-
-def sorteio():
-    numeros_sortidos = ['']
-    pass
+        sleep(1)
+        sorteio = input('Deseja continuar sorteando?\n')
 
 if __name__=='__main__':
     print(sorteador())
