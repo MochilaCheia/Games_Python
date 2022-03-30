@@ -19,11 +19,14 @@ def sorteador_desenhos():
                           '59- Charlie Chaplin', '60- A penguin', '61- A seagull', '62- David Bowie',
                           '63- A sensitive cowboy', '64- A leopard', '65- An anatomy chart', '66- A tree limb',
                           '67- A ship in a bottle', '68- A mouth', '69- Brass knuckles', '70- An ear of corn',
-                          '71- Costume jewelry', '72- A mirage', '73- Smoke', '74- Mold', '75- A rainbow', '76- A dollar bill',
-                          '77- A bone', '78- A glass of milk', '79- A teapot', '80- Weeds', '81- Dance steps', '82- A turkey leg',
-                          '83- A pencil', '84- A picket fence', '85- A Tiffany lamp', '86- The Empire State Building',
-                          '87- A stalagmite', '88- A stalactite', '89- A kiss', '90- A ladybug', '91- A helmet', '92- A paw print',
-                          '93- A Martian', '94- A T-shirt', '95- A cinder block', '96- Swim fins', '97- A ripe banana',
+                          '71- Costume jewelry', '72- A mirage', '73- Smoke', '74- Mold', '75- A rainbow',
+                          '76- A dollar bill', '77- A bone',
+                          '78- A glass of milk', '79- A teapot', '80- Weeds', '81- Dance steps',
+                          '82- A turkey leg', '83- A pencil',
+                          '84- A picket fence', '85- A Tiffany lamp', '86- The Empire State Building',
+                          '87- A stalagmite', '88- A stalactite', '89- A kiss', '90- A ladybug', '91- A helmet',
+                          '92- A paw print', '93- A Martian',
+                          '94- A T-shirt', '95- A cinder block', '96- Swim fins', '97- A ripe banana',
                           '98- A barbell', '99- A tennis racket', '100- Japan', '101- A spiral staircase',
                           '102- A ponytail', '103- A campfire', '104- A squirrel', '105- A thumb', '106- A book',
                           '107- Girlish laughter', '108- Tangled ribbons', '109- Noodles', '110- Best friends',
@@ -33,8 +36,9 @@ def sorteador_desenhos():
                           '123- A cassette tape', '124- A library card', '125- A corn dog with mustard',
                           '126- Mittens', '127- A pocket', '128- A bunch of grapes', '129- A vending machine',
                           '130- A typewriter', '131- A flamingo', '132- A kebab', '133- Shelves', '134- A necklace',
-                          '135- A dirty rag', '136- A scallion pancake', '137- A time machine', '138- A Tyrannosaurus Rex',
-                          '139- A music box', '140- A candelabra', '141- A quarter', '142- A bulldog', '143- A fairy',
+                          '135- A dirty rag', '136- A scallion pancake', '137- A time machine',
+                          '138- A Tyrannosaurus Rex', '139- A music box',
+                          '140- A candelabra', '141- A quarter', '142- A bulldog', '143- A fairy',
                           '144- A ball of yarn', '145- A haircut', '146- An electric guitar', '147- Confetti',
                           '148- A pair of scissors', '149- A bandage', '150- A watermelon', '151- Bacon',
                           '152- A newsboy cap', '153- A seed pod', '154- A board game', '155- Daffodils',
@@ -468,8 +472,10 @@ def sorteador_desenhos():
         sleep(1)
         sorteio = input('Deseja continuar sorteando?\n')
 
+
 if __name__=='__main__':
     print(sorteador_desenhos())
+
 
  # No arquivo de texto que for gerado pra adicionar os desenhos sorteados,
  # faça uma operação que conte os desenhos no arquivo de texto e subtraia menos 642.
