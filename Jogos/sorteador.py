@@ -52,32 +52,14 @@ possiveis_desenhos = ['1- A rolling pin', '2- A hammock', '3- An anchor', '4- A 
                       '192- An ice cream cone', '193- A marble', '194- A weathervane', '195- A lunchbox',
                       '196- A pound', '197- A trolley car', '198- Cat whiskers', '199- A cleaver',
                       '200- Electricity', '201- A Quonset hut', '202- A treasure chest', '203- Binoculars',
-                      '204- A pumpkin', '205- A chalkboard',
-'Stiletto heels',
-'A crowd',
-'A pile of tires',
-'A zombie',
-'French fries',
-'A butterfly',
-'A watering can',
-'A cactus',
-'Coral',
-'Playing cars',
-'A celebration',
-'A constellation',
-'The northern lights',
-'Bonbons',
-'A wink',
-'An inchworm',
-'A knife',
-'A kite',
-'The Olympics',
-'A box of tissues',
-'A balloon animal',
-'A spiral-bound notebook',
-'A salt shaker',
-'A bearded lady',
-'A wrinkle',
+                      '204- A pumpkin', '205- A chalkboard', '206- Stiletto heels', '207- A crowd',
+                      '208- A pile of tires', '209- A zombie', '210- French fries', '211- A butterfly',
+                      '212- A watering can', '213- A cactus', '214- Coral', '215- Playing cars',
+                      '216- A celebration', '217- A constellation', '218- The northern lights',
+                      '219- Bonbons', '220- A wink', '221- An inchworm', '222- A knife',
+                      '223- A kite', '224- The Olympics', '225- A box of tissues', '226- A balloon animal',
+                      '227- A spiral-bound notebook', '228- A salt shaker', '229- A bearded lady',
+                      '230- A wrinkle',
 'A box of kittens',
 'A slug',
 'A shadow',
@@ -441,14 +423,21 @@ possiveis_desenhos = ['1- A rolling pin', '2- A hammock', '3- An anchor', '4- A 
 'An ink pot',
 'A sippy cup',
 'Maple syrup',
-                      'A video game', 'Tectonic plates', 'A beach',
-                      'A wedding dress', 'A spelunker', 'A calculator', 'A baby monster', 'A transportation system',
-                      'A swamp', 'An invitation', 'An oven', 'A train', 'The Bermuda Triangle', 'A heart', 'A movie star',
-                      'A spiderweb', 'An igloo', 'Presidential pets', 'Paisley', 'A grandma', 'Lightning',
-                      'Wind', 'Run-D.M.C.', 'A tuxedo', 'A mayonnaise jar', 'A lemon meringue pie',
-                      'A sea urchin', 'A canyon', 'A cave', 'A concert', 'A viper', 'A phonograph', 'A bow', 'A convertible',
-                      'Ski slopes', 'A mummy', 'Broken glass', 'A bed', 'A bar of music', 'Polka dots', 'Woodgrain',
-                      'Plaid', 'Zigzag', 'A tacky rug', 'A plastic bag', 'A muffin tin', 'A sweater', 'A tuba', 'Yourself']
+                      '594- A video game', '595- Tectonic plates', '596- A beach',
+                      '597- A wedding dress', '598- A spelunker', '599- A calculator',
+                      '600- A baby monster', '601- A transportation system',
+                      '602- A swamp', '603- An invitation', '604- An oven', '605- A train',
+                      '606- The Bermuda Triangle', '607- A heart', '608- A movie star',
+                      '609- A spiderweb', '610- An igloo', '611- Presidential pets',
+                      '612- Paisley', '613- A grandma', '614- Lightning',
+                      '615- Wind', '616- Run-D.M.C.', '617- A tuxedo',
+                      '618- A mayonnaise jar', '619- A lemon meringue pie',
+                      '620- A sea urchin', '621- A canyon', '622- A cave', '623- A concert',
+                      '624- A viper', '625- A phonograph', '626- A bow', '627- A convertible',
+                      '628- Ski slopes', '629- A mummy', '630- Broken glass', '631- A bed',
+                      '632- A bar of music', '633- Polka dots', '634- Woodgrain',
+                      '635- Plaid', '636- Zigzag', '637- A tacky rug', '638- A plastic bag',
+                      '639- A muffin tin', '640- A sweater', '641- A tuba', '642- Yourself']
 
 
 def sorteio_aleatorio():
@@ -482,16 +471,22 @@ def sorteio_aleatorio():
 
 def sorterio_sequencia():
 
-    proxima = input('Deseja começar?\n')
+    proxima = input('Vamos começar a sortear seus desenhos?\n')
+    print('As sugestões de desenhos foram retirados de "642 coisas para desenhar"')
 
-    for corrida in possiveis_desenhos:
-        confirmacao  = input('Deseja ver a sugestão de desenho?')
-        print(corrida)
+    if proxima == 'sim':
+        for corrida in possiveis_desenhos:
+            confirmacao = input('Gostaria de ver a sugestão?\n')
+            print(corrida)
 
+            if confirmacao == 'não':
+                print('Tudo certo! te vejo na próxima vez!')
+                break
 
 if __name__=='__main__':
     #print(sorteio_aleatorio())
-    print(sorterio_sequencia())
+    #print(sorterio_sequencia())
+    pass
 
 
  # No arquivo de texto que for gerado pra adicionar os desenhos sorteados,
