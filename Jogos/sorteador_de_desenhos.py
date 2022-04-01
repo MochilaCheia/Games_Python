@@ -441,19 +441,20 @@ possiveis_desenhos = ['1- A rolling pin', '2- A hammock', '3- An anchor', '4- A 
 
 
 def sorteio_aleatorio():
-
-    print('Olá, eu sou sou Sorte! seu sorteador de desenhos!\n~Seja bem vindo!~')
+    print('Olá, eu sou sou Sorte! seu sorteador de desenhos!\n~Seja bem vindo!~\n')
 
     sleep(1)
     print('>> Para utilizar o sistema, basta responder a pergunta do jeito que preferir'
-          ' e para encerrar basta responder não a pergunta.<<')
+          ' e para encerrar basta responder não a pergunta.<<\n')
 
     sleep(1)
     print('Um arquivo de texto será criado para anotar quais desenhos você sortear, '
           'assim você não desenhará o mesmo por engano.\n')
 
     sorteio = input('Deseja sortear seu desenho?\n')
+    print('As sugestões de desenhos foram retirados de "642 coisas para desenhar"')
 
+    sleep(1)
     while sorteio != 'não':
         numeros_sortidos = random.choice(possiveis_desenhos)
         sleep(1)
@@ -470,22 +471,42 @@ def sorteio_aleatorio():
 
 
 def sorterio_sequencia():
+    print('Olá, eu sou sou Sorte! seu sorteador de desenhos!\n~Seja bem vindo!~\n')
+
+    sleep(1)
+    print('>> Para utilizar o sistema, basta responder a primeira e segunda perguntas com sim <<\n'
+          '>> e depois do jeito que preferir para continuar <<\n'
+          '>> e para encerrar basta responder não a alguma das perguntas.<<\n')
+
+    sleep(1)
+    print('Um arquivo de texto será criado para anotar quais desenhos você sortear, '
+          'assim você não desenhará o mesmo por engano.\n')
 
     proxima = input('Vamos começar a sortear seus desenhos?\n')
-    print('As sugestões de desenhos foram retirados de "642 coisas para desenhar"')
 
+    sleep(1)
     if proxima == 'sim':
-        for corrida in possiveis_desenhos:
-            confirmacao = input('Gostaria de ver a sugestão?\n')
-            print(corrida)
 
+        print('As sugestões de desenhos foram retirados de "642 coisas para desenhar"')
+        sleep(1)
+
+        for correr in possiveis_desenhos:
+            confirmacao = input('Você gostaria de ver a sugestão?\n')
+
+            sleep(1)
             if confirmacao == 'não':
                 print('Tudo certo! te vejo na próxima vez!')
                 break
 
+            print(f'A sugestão é: {correr}, não se esqueça de se divirtir desenhando!')
+            sleep(1)
+
+    else:
+        print('Tudo certo, até mais!')
+
 if __name__=='__main__':
     #print(sorteio_aleatorio())
-    #print(sorterio_sequencia())
+    print(sorterio_sequencia())
     pass
 
 
