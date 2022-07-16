@@ -18,15 +18,14 @@ possiveis_desenhos = ['1- A rolling pin', '2- A hammock', '3- An anchor', '4- A 
                       '63- A sensitive cowboy', '64- A leopard', '65- An anatomy chart', '66- A tree limb',
                       '67- A ship in a bottle', '68- A mouth', '69- Brass knuckles', '70- An ear of corn',
                       '71- Costume jewelry', '72- A mirage', '73- Smoke', '74- Mold', '75- A rainbow',
-                      '76- A dollar bill', '77- A bone',
-                      '78- A glass of milk', '79- A teapot', '80- Weeds', '81- Dance steps',
-                      '82- A turkey leg', '83- A pencil',
-                      '84- A picket fence', '85- A Tiffany lamp', '86- The Empire State Building',
+                      '76- A dollar bill', '77- A bone', '78- A glass of milk', '79- A teapot', '80- Weeds',
+                      '81- Dance steps', '82- A turkey leg', '83- A pencil', '84- A picket fence',
+                      '85- A Tiffany lamp', '86- The Empire State Building',
                       '87- A stalagmite', '88- A stalactite', '89- A kiss', '90- A ladybug', '91- A helmet',
-                      '92- A paw print', '93- A Martian',
-                      '94- A T-shirt', '95- A cinder block', '96- Swim fins', '97- A ripe banana',
-                      '98- A barbell', '99- A tennis racket', '100- Japan', '101- A spiral staircase',
-                      '102- A ponytail', '103- A campfire', '104- A squirrel', '105- A thumb', '106- A book',
+                      '92- A paw print', '93- A Martian', '94- A T-shirt', '95- A cinder block',
+                      '96- Swim fins', '97- A ripe banana', '98- A barbell', '99- A tennis racket',
+                      '100- Japan', '101- A spiral staircase', '102- A ponytail', '103- A campfire',
+                      '104- A squirrel', '105- A thumb', '106- A book',
                       '107- Girlish laughter', '108- Tangled ribbons', '109- Noodles', '110- Best friends',
                       '111- Worst enemies', '112- A lock', '113- An accordion', '114- A log',
                       '115- A melting candle', '116- A phone booth', '117- A geode', '118- Dice',
@@ -168,75 +167,54 @@ possiveis_desenhos = ['1- A rolling pin', '2- A hammock', '3- An anchor', '4- A 
                       '635- Plaid', '636- Zigzag', '637- A tacky rug', '638- A plastic bag',
                       '639- A muffin tin', '640- A sweater', '641- A tuba', '642- Yourself']
 
+lista_usuario = []
 
-def sorteio_aleatorio():
+
+def sorteador():
     print('Olá, eu sou sou Sorte! seu sorteador de desenhos!\n~Seja bem vindo!~\n')
 
-    sleep(1)
-    print('>> Para utilizar o sistema, basta responder a pergunta do jeito que preferir'
-          ' e para encerrar basta responder não a pergunta.<<\n')
+    escolha = input('Primeiro, me diga qual lista de desenhos você gostaria de acessar: \n'
+                    '1 - lista de 642 opções, 2 - Sua lista ou 3 - Criar nova lista\n'
+                    'Basta digitar o número e apertar enter:\n')
 
-    sleep(1)
-    print('Um arquivo de texto será criado para anotar quais desenhos você sortear, '
-          'assim você não desenhará o mesmo por engano.\n')
-
-    sorteio = input('Deseja sortear seu desenho?\n')
-    print('As sugestões de desenhos foram retirados de "642 coisas para desenhar"')
-
-    sleep(1)
-    while sorteio != 'não':
-        numeros_sortidos = random.choice(possiveis_desenhos)
+    if escolha == '1':
         sleep(1)
-        print(f'Você sorteou: {numeros_sortidos}. Divirta-se desenhando!\n')
-
-        numero_itens = len(possiveis_desenhos)
-        sleep(1)
-        print(f'E o número de opções restantes é: {numero_itens}\n')
-
-        possiveis_desenhos.remove(numeros_sortidos)
-
-        sleep(1)
-        sorteio = input('Deseja continuar sorteando?\n')
-
-
-def sorterio_sequencia():
-    print('Olá, eu sou sou Sorte! seu sorteador de desenhos!\n~Seja bem vindo!~\n')
-
-    sleep(1)
-    print('>> Para utilizar o sistema, basta responder a primeira e segunda perguntas com sim <<\n'
-          '>> e depois do jeito que preferir para continuar <<\n'
-          '>> e para encerrar basta responder não a alguma das perguntas.<<\n')
-
-    sleep(1)
-    print('Um arquivo de texto será criado para anotar quais desenhos você sortear, '
-          'assim você não desenhará o mesmo por engano.\n')
-
-    proxima = input('Vamos começar a sortear seus desenhos?\n')
-
-    sleep(1)
-    if proxima == 'sim':
-
         print('As sugestões de desenhos foram retirados de "642 coisas para desenhar"')
-        sleep(1)
+        modo = input('Você gostaria de receber os itens da lista aleatorimanete ou de maneira sequencial?\n'
+                     'Digite -1- para aleatorio e -2- para sequencial:\n')
 
-        for correr in possiveis_desenhos:
-            confirmacao = input('Você gostaria de ver a sugestão?\nAperte qualquer tecla e enter para continuar')
+        if modo == '1':
+            opcao = possiveis_desenhos
+            sleep(1)
+            print('>> Responda as perguntas como preferir e para encerrar digite -não- <<\n')
+            sorteio = input('Deseja sortear seu desenho?\n')
 
             sleep(1)
-            if confirmacao == 'não':
-                print('Tudo certo! te vejo na próxima vez!')
-                break
+            while sorteio != 'não':
+                numeros_sortidos = random.choice(opcao)
+                sleep(1)
+                print(f'Você sorteou: {numeros_sortidos}. Divirta-se desenhando!\n')
+                sleep(1)
+                sorteio = input('Deseja continuar sorteando?\n')
 
-            print(f'A sugestão é: {correr}, não se esqueça de se divirtir desenhando!')
+        elif escolha == '2':
             sleep(1)
+            print('As sugestões de desenhos foram retirados de "642 coisas para desenhar"')
 
-    else:
-        print('Tudo certo, até mais!')
+            sleep(1)
+            for correr in possiveis_desenhos:
+                confirmacao = input('Quer uma sugestão de desenho?\n'
+                                    '-sim- para continuar.')
+
+                sleep(1)
+                if confirmacao == 'sim':
+                    print(f'A sugestão é: {correr}, não se esqueça de se divirtir desenhando!')
+                    sleep(1)
 
 
 if __name__ == '__main__':
-    print(sorteio_aleatorio())
-# print(sorterio_sequencia())
+    print(sorteador())
+
 # No arquivo de texto gerado para adicionar os desenhos sorteados,
 # faça uma operação que conte os desenhos no arquivo de texto e subtraia menos 642.
 # Fazer a parte de criação de um arquivo de texto e o tratamento de erros no final quando acabam os itens da lista.
