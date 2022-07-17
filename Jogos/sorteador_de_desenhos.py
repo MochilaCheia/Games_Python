@@ -216,5 +216,4 @@ if __name__ == '__main__':
     print(sorteador())
 
 # No arquivo de texto gerado para adicionar os desenhos sorteados,
-# faça uma operação que conte os desenhos no arquivo de texto e subtraia menos 642.
 # Fazer a parte de criação de um arquivo de texto e o tratamento de erros no final quando acabam os itens da lista.
